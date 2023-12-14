@@ -15,7 +15,7 @@ package:
     - "./bin/**"
 functions:
   streams:
-    handler: bin/cmd/hello
+    handler: bin/api/hello
     events:
       - http:
           path: /hello
