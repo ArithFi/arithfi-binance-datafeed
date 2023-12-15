@@ -17,7 +17,7 @@ func GenerateResponse(Body string, Code int) events.APIGatewayProxyResponse {
 }
 
 func HandleRequest(_ context.Context, request events.LambdaFunctionURLRequest) (events.APIGatewayProxyResponse, error) {
-	data := []Response{{ServerTime: time.Now().Unix()}}
+	data := Response{ServerTime: time.Now().Unix()}
 	jsonData, err := json.Marshal(data)
 	if err != nil {
 		return events.APIGatewayProxyResponse{}, err
