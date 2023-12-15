@@ -14,9 +14,21 @@ package:
     - "!./**"
     - "./bin/**"
 functions:
-  streams:
-    handler: bin/api/hello
+  ping:
+    handler: bin/api/ping
     events:
       - http:
-          path: /hello
-          method: post
+          path: /ping
+          method: get
+  time:
+    handler: bin/api/time
+    events:
+      - http:
+          path: /time
+          method: get
+  klines:
+    handler: bin/api/klines
+    events:
+      - http:
+          path: /klines
+          method: get
