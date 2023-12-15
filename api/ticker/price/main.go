@@ -1,4 +1,4 @@
-package hello
+package ticker_price
 
 import (
 	"context"

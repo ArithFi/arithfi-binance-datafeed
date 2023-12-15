@@ -14,9 +14,15 @@ package:
     - "!./**"
     - "./bin/**"
 functions:
-  streams:
+  account_assets:
+    handler: bin/api/account/assets
+    events:
+      - http:
+          path: /api/account/assets
+          method: get
+  hello:
     handler: bin/api/hello
     events:
       - http:
-          path: /hello
-          method: post
+          path: /api/hello
+          method: get
