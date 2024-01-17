@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-clean": "rm -rf ./bin",
-    "build-api": "find ./api -type f -name 'main.go' -exec dirname {} \\; | xargs -I {} env GOOS=linux GOARCH=amd64 go build -o \"bin/{}\" {}",
-    "build-cmd": "find ./cmd -type f -name 'main.go' -exec dirname {} \\; | xargs -I {} env GOOS=linux GOARCH=amd64 go build -o \"bin/{}\" {}"
+    "clean": "rm -rf ./bin",
+    "build": "find ./ -type f -name 'main.go' -exec dirname {} \\; | xargs -I {} env GOOS=linux GOARCH=amd64 go build -o \"bin/{}\" {}"
   },
   "author": "",
   "license": "ISC",

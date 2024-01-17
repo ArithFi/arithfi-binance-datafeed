@@ -14,15 +14,21 @@ package:
     - "!./**"
     - "./bin/**"
 functions:
-  account_assets:
-    handler: bin/api/account/assets
+  ping:
+    handler: bin/api/ping
     events:
       - http:
-          path: /api/account/assets
+          path: /ping
           method: get
-  hello:
-    handler: bin/api/hello
+  time:
+    handler: bin/api/time
     events:
       - http:
-          path: /api/hello
+          path: /time
+          method: get
+  klines:
+    handler: bin/api/klines
+    events:
+      - http:
+          path: /klines
           method: get
