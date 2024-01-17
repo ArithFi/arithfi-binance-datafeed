@@ -1,2 +1,2 @@
-# ArithFi periphery
+# ArithFi Binance Datafeed
 
