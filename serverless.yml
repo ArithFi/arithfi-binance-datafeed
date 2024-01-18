@@ -16,12 +16,14 @@ package:
 functions:
   time:
     handler: bin/api/time
+    memorySize: 256
     events:
       - http:
           path: /time
           method: get
   klines:
     handler: bin/api/klines
+    memorySize: 256
     events:
       - http:
           path: /klines
