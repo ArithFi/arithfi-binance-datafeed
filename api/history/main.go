@@ -13,6 +13,7 @@ func GenerateResponse(Body string, Code int) events.APIGatewayProxyResponse {
 }
 
 func HandleRequest(_ context.Context, request events.LambdaFunctionURLRequest) (events.APIGatewayProxyResponse, error) {
+
 	return GenerateResponse(strconv.FormatInt(time.Now().Unix(), 10), 200), nil
 }
 
